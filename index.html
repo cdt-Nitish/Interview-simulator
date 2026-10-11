@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-site-verification" content="BmVvs87cvK7QM5TbFTA4JD84SW37YZTM6IUndhOr6KM" />
+  <title>InterviewAI — AI Mock Interview Practice Platform</title>
+  <meta name="description" content="AI-powered mock interview practice platform. Practice realistic technical and HR interviews, analyze answers with Gemini AI, track facial and eye metrics, and build confidence.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="brand" aria-label="InterviewAI Home">
+        <span class="brand-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+            <line x1="8" y1="21" x2="16" y2="21"></line>
+            <line x1="12" y1="17" x2="12" y2="21"></line>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+        </span>
+        <span class="brand-text">Interview<span class="brand-accent">AI</span></span>
+        <span class="brand-badge">PROTOTYPE</span>
+      </a>
+
+      <nav class="nav-menu" id="navMenu" aria-label="Main Navigation">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#how-it-works" class="nav-link">How It Works</a>
+        <a href="#categories" class="nav-link">Categories</a>
+        <a href="#dashboard-preview" class="nav-link">Dashboard</a>
+        <a href="#about" class="nav-link">About</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" class="btn btn-ghost" id="loginNavBtn">Login</button>
+        <button type="button" class="btn btn-primary" id="startNavBtn">Get Started</button>
+        <button type="button" class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main id="mainContent">
+
+    <!-- ================= HERO SECTION ================= -->
+    <section class="section hero-section" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-tag">
+            <span class="status-dot"></span>
+            <span>NEXT-GEN INTERVIEW SIMULATOR • GEMINI &amp; MEDIAPIPE READY</span>
+          </div>
+
+          <h1 class="hero-title">
+            Practice Smarter.<br>
+            Interview Better.
+          </h1>
+
+          <p class="hero-subtitle">
+            An AI-powered mock interview platform that generates realistic questions, evaluates your answers, and helps you improve with every interview.
+          </p>
+
+          <div class="hero-cta-group">
+            <button type="button" class="btn btn-primary btn-lg" id="heroStartBtn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              Start Mock Interview
+            </button>
+            <a href="#how-it-works" class="btn btn-secondary btn-lg">
+              See How It Works
+            </a>
+          </div>
+
+          <div class="hero-meta">
+            <div class="meta-item">
+              <span class="meta-val">100% Free</span>
+              <span class="meta-lbl">Practice Sessions</span>
+            </div>
+            <div class="meta-divider"></div>
+            <div class="meta-item">
+              <span class="meta-val">Instant</span>
+              <span class="meta-lbl">AI Scoring</span>
+            </div>
+            <div class="meta-divider"></div>
+            <div class="meta-item">
+              <span class="meta-val">Private</span>
+              <span class="meta-lbl">In-Browser Camera</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Realistic Interactive Interview Preview Card -->
+        <div class="hero-preview">
+          <div class="terminal-card preview-app">
+            <div class="preview-header">
+              <div class="preview-header-left">
+                <span class="window-dot red"></span>
+                <span class="window-dot yellow"></span>
+                <span class="window-dot green"></span>
+                <span class="preview-title">AI MOCK INTERVIEW — SESSION #4092</span>
+              </div>
+              <div class="preview-header-right">
+                <span class="badge-status live">● LIVE EVALUATION</span>
+              </div>
+            </div>
+
+            <div class="preview-body">
+              <div class="preview-meta-row">
+                <div class="preview-role-tag">ROLE: FULL STACK DEVELOPER</div>
+                <div class="preview-q-count">Question 03 / 10</div>
+              </div>
+
+              <div class="preview-question-box">
+                <div class="preview-label">ACTIVE QUESTION</div>
+                <h2 class="preview-question-text">
+                  What is event delegation in JavaScript and how does it leverage event bubbling?
+                </h2>
+                <div class="preview-question-hints">
+                  <span>Topic: JavaScript Core</span>
+                  <span>Difficulty: Intermediate</span>
+                </div>
+              </div>
+
+              <div class="preview-answer-box">
+                <div class="preview-label">CANDIDATE ANSWER INPUT</div>
+                <div class="preview-code-sim">
+                  Event delegation is a technique where we attach a single event listener to a parent element rather than attaching individual listeners to each child. When a child event triggers, it bubbles up to the parent where <span class="syntax-keyword">event.target</span> inspects which element originated the event...
+                  <span class="cursor-blink">|</span>
+                </div>
+              </div>
+
+              <div class="preview-footer-row">
+                <div class="preview-hud-stats">
+                  <span class="preview-stat">👁️ Gaze Alignment: <strong>94%</strong></span>
+                  <span class="preview-stat">⏱️ Timer: <strong>03:42</strong></span>
+                </div>
+                <button type="button" class="btn btn-primary btn-sm" id="heroPreviewTryBtn">
+                  Try Simulator
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FEATURES SECTION ================= -->
+    <section class="section features-section" id="features">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">WHY THIS PLATFORM</div>
+          <h2 class="section-title">Built for Precision, Realism, and Growth</h2>
+          <p class="section-subtitle">
+            Engineered to simulate authentic technical and behavioral rounds through rigorous AI evaluation and real-time monitoring.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <!-- Feature 1 -->
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <span class="feature-icon">🤖</span>
+            </div>
+            <h3 class="feature-title">AI Question Generation</h3>
+            <p class="feature-desc">
+              Generates context-aware, role-specific questions across Frontend, Backend, Full Stack, and HR rounds tailored to your chosen difficulty level.
+            </p>
+            <ul class="feature-list">
+              <li>Configurable difficulty (Junior, Mid, Senior)</li>
+              <li>Domain-specific inquiry patterns</li>
+              <li>Dynamic follow-up questions</li>
+            </ul>
+          </div>
+
+          <!-- Feature 2 -->
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <span class="feature-icon">🧠</span>
+            </div>
+            <h3 class="feature-title">AI Answer Evaluation</h3>
+            <p class="feature-desc">
+              Instant feedback parsing conceptual correctness, relevance, communication clarity, and concrete improvement opportunities.
+            </p>
+            <ul class="feature-list">
+              <li>Rubric-based 0 to 10 scoring</li>
+              <li>Identified key strengths</li>
+              <li>Actionable constructive suggestions</li>
+            </ul>
+          </div>
+
+          <!-- Feature 3 -->
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <span class="feature-icon">👁️</span>
+            </div>
+            <h3 class="feature-title">Face &amp; Eye Analysis</h3>
+            <p class="feature-desc">
+              Integrated with MediaPipe vision standards to compute presence, eye gaze consistency, head orientation, and behavioral confidence signals.
+            </p>
+            <ul class="feature-list">
+              <li>100% client-side privacy preserved</li>
+              <li>Eye contact alignment percentage</li>
+              <li>Posture and engagement tracking</li>
+            </ul>
+          </div>
+
+          <!-- Feature 4 -->
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <span class="feature-icon">📊</span>
+            </div>
+            <h3 class="feature-title">Performance Tracking</h3>
+            <p class="feature-desc">
+              Comprehensive interview archives with historical scores, trend visualization, and role breakdown stored in persistent session storage.
+            </p>
+            <ul class="feature-list">
+              <li>Historical attempt logs</li>
+              <li>Domain-specific mastery curves</li>
+              <li>Detailed question-by-question review</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= HOW IT WORKS ================= -->
+    <section class="section how-it-works-section" id="how-it-works">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">SYSTEM WORKFLOW</div>
+          <h2 class="section-title">How It Works</h2>
+          <p class="section-subtitle">
+            A frictionless five-step cycle designed to mimic real-world recruitment loops.
+          </p>
+        </div>
+
+        <div class="workflow-container">
+          <div class="workflow-step">
+            <div class="step-badge">01</div>
+            <div class="step-connector"></div>
+            <h3 class="step-title">Configure Interview</h3>
+            <p class="step-desc">
+              Select your target job role, question count, and difficulty level to calibrate the session.
+            </p>
+          </div>
+
+          <div class="workflow-step">
+            <div class="step-badge">02</div>
+            <div class="step-connector"></div>
+            <h3 class="step-title">AI Generates Questions</h3>
+            <p class="step-desc">
+              Gemini AI models curate realistic technical challenges and scenario-based interview questions.
+            </p>
+          </div>
+
+          <div class="workflow-step">
+            <div class="step-badge">03</div>
+            <div class="step-connector"></div>
+            <h3 class="step-title">Complete Interview</h3>
+            <p class="step-desc">
+              Answer under realistic timed conditions while MediaPipe evaluates gaze and posture indicators.
+            </p>
+          </div>
+
+          <div class="workflow-step">
+            <div class="step-badge">04</div>
+            <div class="step-connector"></div>
+            <h3 class="step-title">AI Evaluates Answers</h3>
+            <p class="step-desc">
+              Each response is evaluated for technical accuracy, structure, terminology, and depth.
+            </p>
+          </div>
+
+          <div class="workflow-step">
+            <div class="step-badge">05</div>
+            <h3 class="step-title">View Performance</h3>
+            <p class="step-desc">
+              Receive a diagnostic report with overall score, metrics, strengths, and areas to review.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= INTERVIEW CATEGORIES ================= -->
+    <section class="section categories-section" id="categories">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">INTERVIEW CATEGORIES</div>
+          <h2 class="section-title">Select a Track to Begin</h2>
+          <p class="section-subtitle">
+            Click any track to pre-configure your practice session immediately.
+          </p>
+        </div>
+
+        <div class="categories-grid">
+          <div class="category-card" data-role="Technical" role="button" tabindex="0">
+            <div class="category-header">
+              <span class="category-icon">💻</span>
+              <span class="category-badge">Core</span>
+            </div>
+            <h3 class="category-name">Technical</h3>
+            <p class="category-info">
+              Data structures, algorithms, system concepts, problem solving, and computational fundamentals.
+            </p>
+            <div class="category-footer">
+              <span class="cat-questions">25+ Scenarios</span>
+              <span class="cat-action">Launch Track →</span>
+            </div>
+          </div>
+
+          <div class="category-card" data-role="HR" role="button" tabindex="0">
+            <div class="category-header">
+              <span class="category-icon">🤝</span>
+              <span class="category-badge">General</span>
+            </div>
+            <h3 class="category-name">HR &amp; Fit</h3>
+            <p class="category-info">
+              Company culture alignment, career trajectory, motivation, communication, and interpersonal fit.
+            </p>
+            <div class="category-footer">
+              <span class="cat-questions">20+ Scenarios</span>
+              <span class="cat-action">Launch Track →</span>
+            </div>
+          </div>
+
+          <div class="category-card" data-role="Behavioral" role="button" tabindex="0">
+            <div class="category-header">
+              <span class="category-icon">🎯</span>
+              <span class="category-badge">STAR Method</span>
+            </div>
+            <h3 class="category-name">Behavioral</h3>
+            <p class="category-info">
+              Conflict resolution, leadership moments, dealing with tight deadlines, and team collaboration.
+            </p>
+            <div class="category-footer">
+              <span class="cat-questions">18+ Scenarios</span>
+              <span class="cat-action">Launch Track →</span>
+            </div>
+          </div>
+
+          <div class="category-card" data-role="Frontend Developer" role="button" tabindex="0">
+            <div class="category-header">
+              <span class="category-icon">🎨</span>
+              <span class="category-badge">Specialized</span>
+            </div>
+            <h3 class="category-name">Frontend Developer</h3>
+            <p class="category-info">
+              JavaScript internals, DOM optimization, modern CSS, event loops, React, and browser performance.
+            </p>
+            <div class="category-footer">
+              <span class="cat-questions">30+ Scenarios</span>
+              <span class="cat-action">Launch Track →</span>
+            </div>
+          </div>
+
+          <div class="category-card" data-role="Backend Developer" role="button" tabindex="0">
+            <div class="category-header">
+              <span class="category-icon">⚙️</span>
+              <span class="category-badge">Specialized</span>
+            </div>
+            <h3 class="category-name">Backend Developer</h3>
+            <p class="category-info">
+              Node.js runtimes, REST/gRPC API design, SQL/NoSQL indexing, caching, and server concurrency.
+            </p>
+            <div class="category-footer">
+              <span class="cat-questions">28+ Scenarios</span>
+              <span class="cat-action">Launch Track →</span>
+            </div>
+          </div>
+
+          <div class="category-card" data-role="Full Stack Developer" role="button" tabindex="0">
+            <div class="category-header">
+              <span class="category-icon">⚡</span>
+              <span class="category-badge">Comprehensive</span>
+            </div>
+            <h3 class="category-name">Full Stack Developer</h3>
+            <p class="category-info">
+              End-to-end web architecture, state management, relational databases, security, and deployment pipelines.
+            </p>
+            <div class="category-footer">
+              <span class="cat-questions">35+ Scenarios</span>
+              <span class="cat-action">Launch Track →</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= STATISTICS SECTION ================= -->
+    <section class="section stats-section">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-value">10K+</div>
+            <div class="stat-label">Active Candidates</div>
+            <div class="stat-sub">Across 40+ engineering disciplines</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">50K+</div>
+            <div class="stat-label">Interviews Simulated</div>
+            <div class="stat-sub">Realistic technical &amp; HR sessions</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">95%</div>
+            <div class="stat-label">Helpful Feedback</div>
+            <div class="stat-sub">Candidate reported confidence gain</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">24/7</div>
+            <div class="stat-label">Practice Availability</div>
+            <div class="stat-sub">Instant zero-latency feedback loop</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= DASHBOARD PREVIEW ================= -->
+    <section class="section dashboard-section" id="dashboard-preview">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">CANDIDATE DASHBOARD</div>
+          <h2 class="section-title">Track Every Milestones with Analytics</h2>
+          <p class="section-subtitle">
+            Preview the candidate telemetry console. Track progress over time, review past transcripts, and pinpoint improvement areas.
+          </p>
+        </div>
+
+        <div class="dashboard-window">
+          <!-- Window Header Bar -->
+          <div class="window-bar">
+            <div class="window-controls">
+              <span class="window-dot red"></span>
+              <span class="window-dot yellow"></span>
+              <span class="window-dot green"></span>
+            </div>
+            <div class="window-title">interviewai.app/candidate/dashboard</div>
+            <div class="window-status">
+              <span class="status-indicator"></span> CONNECTED
+            </div>
+          </div>
+
+          <!-- Window Content -->
+          <div class="dashboard-body">
+            <div class="dashboard-greeting">
+              <div>
+                <h3 class="dash-welcome">Good Morning, Candidate</h3>
+                <p class="dash-sub">Here is your interview readiness summary across your recent simulation sessions.</p>
+              </div>
+              <div class="dash-actions">
+                <button type="button" class="btn btn-primary btn-sm" id="dashStartNewBtn">Start New Interview</button>
+              </div>
+            </div>
+
+            <!-- Dashboard Stats Row -->
+            <div class="dash-stats-row">
+              <div class="dash-stat-box">
+                <div class="dash-box-label">AVERAGE SCORE</div>
+                <div class="dash-box-val"><span id="dashAvgScore">8.2</span> <span class="dash-max">/ 10</span></div>
+                <div class="dash-box-trend positive">↑ +0.6 this week</div>
+              </div>
+
+              <div class="dash-stat-box">
+                <div class="dash-box-label">INTERVIEWS COMPLETED</div>
+                <div class="dash-box-val" id="dashTotalInterviews">12</div>
+                <div class="dash-box-trend">Across 4 roles</div>
+              </div>
+
+              <div class="dash-stat-box">
+                <div class="dash-box-label">LATEST INTERVIEW</div>
+                <div class="dash-box-val small" id="dashLatestRole">Full Stack Developer</div>
+                <div class="dash-box-trend score">Score: <strong id="dashLatestScore">8.6 / 10</strong></div>
+              </div>
+
+              <div class="dash-stat-box">
+                <div class="dash-box-label">AVERAGE EYE CONTACT</div>
+                <div class="dash-box-val">88%</div>
+                <div class="dash-box-trend positive">Optimal gaze engagement</div>
+              </div>
+            </div>
+
+            <!-- Performance Bar and Recent Sessions -->
+            <div class="dash-columns">
+              <!-- Left Column: Performance Progress -->
+              <div class="dash-card">
+                <div class="dash-card-header">
+                  <h4 class="dash-card-title">Overall Readiness Assessment</h4>
+                  <span class="badge-status">84% READY</span>
+                </div>
+                <p class="dash-text">Calculated from 12 completed sessions including technical accuracy, response structure, and behavioral composure.</p>
+                
+                <div class="progress-bar-container">
+                  <div class="progress-bar-fill" style="width: 84%;"></div>
+                </div>
+
+                <div class="metric-breakdown">
+                  <div class="metric-row">
+                    <span class="metric-name">Technical Accuracy</span>
+                    <span class="metric-val">8.5 / 10</span>
+                  </div>
+                  <div class="metric-row">
+                    <span class="metric-name">Communication Clarity</span>
+                    <span class="metric-val">7.8 / 10</span>
+                  </div>
+                  <div class="metric-row">
+                    <span class="metric-name">Relevance &amp; Depth</span>
+                    <span class="metric-val">8.4 / 10</span>
+                  </div>
+                  <div class="metric-row">
+                    <span class="metric-name">Eye Alignment (MediaPipe)</span>
+                    <span class="metric-val">8.8 / 10</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right Column: Recent Interviews Table -->
+              <div class="dash-card">
+                <div class="dash-card-header">
+                  <h4 class="dash-card-title">Recent Interviews</h4>
+                  <span class="dash-view-all">Archive</span>
+                </div>
+
+                <div class="recent-interviews-list" id="dashRecentList">
+                  <div class="recent-row">
+                    <div class="recent-info">
+                      <span class="recent-role">Frontend Developer</span>
+                      <span class="recent-date">Oct 02, 2026 • 5 Questions</span>
+                    </div>
+                    <div class="recent-score-badge good">8.4</div>
+                  </div>
+
+                  <div class="recent-row">
+                    <div class="recent-info">
+                      <span class="recent-role">Backend Developer</span>
+                      <span class="recent-date">Sep 28, 2026 • 5 Questions</span>
+                    </div>
+                    <div class="recent-score-badge average">7.8</div>
+                  </div>
+
+                  <div class="recent-row">
+                    <div class="recent-info">
+                      <span class="recent-role">HR &amp; Fit Round</span>
+                      <span class="recent-date">Sep 25, 2026 • 5 Questions</span>
+                    </div>
+                    <div class="recent-score-badge good">8.7</div>
+                  </div>
+
+                  <div class="recent-row">
+                    <div class="recent-info">
+                      <span class="recent-role">Full Stack Developer</span>
+                      <span class="recent-date">Sep 20, 2026 • 10 Questions</span>
+                    </div>
+                    <div class="recent-score-badge good">8.6</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT SECTION ================= -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="about-card">
+          <div class="about-content">
+            <div class="section-tag">ACADEMIC &amp; ENGINEERING FOUNDATION</div>
+            <h2 class="about-title">Designed for Real Engineering Interviews</h2>
+            <p class="about-text">
+              Traditional mock interviews are expensive, infrequent, and rarely offer structured diagnostic feedback. <strong>InterviewAI</strong> combines Google Gemini's cognitive evaluation models with MediaPipe computer vision metrics to provide unlimited, reliable practice rounds right from your browser.
+            </p>
+            <div class="tech-pills">
+              <span class="tech-pill">Google Gemini API</span>
+              <span class="tech-pill">MediaPipe Face Mesh</span>
+              <span class="tech-pill">Node.js / Express</span>
+              <span class="tech-pill">MySQL Database</span>
+              <span class="tech-pill">Vanilla JS Core</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CALL TO ACTION ================= -->
+    <section class="section cta-section">
+      <div class="container">
+        <div class="cta-box">
+          <h2 class="cta-title">Ready for your next interview?</h2>
+          <p class="cta-subtitle">
+            Configure your target domain, enable your camera, and experience a realistic mock session in seconds.
+          </p>
+          <div class="cta-actions">
+            <button type="button" class="btn btn-primary btn-lg" id="ctaStartBtn">
+              Start Practicing Now
+            </button>
+            <button type="button" class="btn btn-secondary btn-lg" id="ctaRegisterBtn">
+              Create Free Account
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand-col">
+        <div class="brand">
+          <span class="brand-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+              <line x1="8" y1="21" x2="16" y2="21"></line>
+              <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
+          </span>
+          <span class="brand-text">Interview<span class="brand-accent">AI</span></span>
+        </div>
+        <p class="footer-desc">
+          Professional AI-powered mock interview practice platform. Built with HTML5, CSS3, and Vanilla JavaScript.
+        </p>
+        <div class="footer-version">System Version: v1.0.4 • Protocol Ready</div>
+      </div>
+
+      <div class="footer-links-col">
+        <h4 class="footer-heading">Platform</h4>
+        <ul class="footer-list">
+          <li><a href="#features">AI Evaluation</a></li>
+          <li><a href="#how-it-works">Workflow</a></li>
+          <li><a href="#categories">Track Selection</a></li>
+          <li><a href="#dashboard-preview">Performance</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-col">
+        <h4 class="footer-heading">Tracks</h4>
+        <ul class="footer-list">
+          <li><a href="#categories" data-select="Full Stack Developer">Full Stack</a></li>
+          <li><a href="#categories" data-select="Frontend Developer">Frontend</a></li>
+          <li><a href="#categories" data-select="Backend Developer">Backend</a></li>
+          <li><a href="#categories" data-select="Technical">Core Technical</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-col">
+        <h4 class="footer-heading">Architecture</h4>
+        <ul class="footer-list">
+          <li><span class="footer-static">Node.js + Express Backend</span></li>
+          <li><span class="footer-static">Gemini API Questions</span></li>
+          <li><span class="footer-static">MediaPipe Vision</span></li>
+          <li><span class="footer-static">MySQL Persistence</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <div class="footer-copy">
+        &copy; 2026 InterviewAI. All rights reserved. Human-designed engineering prototype.
+      </div>
+      <div class="footer-meta">
+        <span class="status-live">● System Operational</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= TOAST CONTAINER ================= -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <!-- ================= AUTH MODALS ================= -->
+  
+  <!-- Login Modal -->
+  <div class="modal-overlay" id="loginModal" role="dialog" aria-modal="true" aria-labelledby="loginTitle" hidden>
+    <div class="modal-card">
+      <div class="modal-header">
+        <div class="modal-header-text">
+          <h3 class="modal-title" id="loginTitle">Candidate Login</h3>
+          <p class="modal-subtitle">Access your interview logs and performance telemetry</p>
+        </div>
+        <button type="button" class="modal-close" data-close-modal="loginModal" aria-label="Close modal">&times;</button>
+      </div>
+
+      <form id="loginForm" class="modal-form" novalidate>
+        <div class="form-group">
+          <label for="loginEmail" class="form-label">Email Address</label>
+          <input type="email" id="loginEmail" class="form-input" placeholder="candidate@example.com" required autocomplete="email">
+          <span class="form-error" id="loginEmailError"></span>
+        </div>
+
+        <div class="form-group">
+          <div class="label-row">
+            <label for="loginPassword" class="form-label">Password</label>
+            <a href="#" class="form-link" id="forgotPasswordBtn">Forgot Password?</a>
+          </div>
+          <input type="password" id="loginPassword" class="form-input" placeholder="••••••••" required autocomplete="current-password">
+          <span class="form-error" id="loginPasswordError"></span>
+        </div>
+
+        <div class="form-options">
+          <label class="checkbox-label">
+            <input type="checkbox" id="rememberMe">
+            <span>Remember this device</span>
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block" id="loginSubmitBtn">
+          Login to Platform
+        </button>
+
+        <div class="modal-switch">
+          Don't have an account?
+          <button type="button" class="btn-link" id="switchToRegisterBtn">Create Account</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Register Modal -->
+  <div class="modal-overlay" id="registerModal" role="dialog" aria-modal="true" aria-labelledby="registerTitle" hidden>
+    <div class="modal-card">
+      <div class="modal-header">
+        <div class="modal-header-text">
+          <h3 class="modal-title" id="registerTitle">Create Account</h3>
+          <p class="modal-subtitle">Start your targeted mock interview preparation</p>
+        </div>
+        <button type="button" class="modal-close" data-close-modal="registerModal" aria-label="Close modal">&times;</button>
+      </div>
+
+      <form id="registerForm" class="modal-form" novalidate>
+        <div class="form-group">
+          <label for="regName" class="form-label">Full Name</label>
+          <input type="text" id="regName" class="form-input" placeholder="Alex Morgan" required autocomplete="name">
+          <span class="form-error" id="regNameError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="regEmail" class="form-label">Email Address</label>
+          <input type="email" id="regEmail" class="form-input" placeholder="alex@example.com" required autocomplete="email">
+          <span class="form-error" id="regEmailError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="regRole" class="form-label">Primary Target Role</label>
+          <select id="regRole" class="form-select">
+            <option value="Full Stack Developer">Full Stack Developer</option>
+            <option value="Frontend Developer">Frontend Developer</option>
+            <option value="Backend Developer">Backend Developer</option>
+            <option value="Technical">Technical Generalist</option>
+            <option value="Behavioral">Behavioral / Leadership</option>
+            <option value="HR">HR / Culture Fit</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="regPassword" class="form-label">Password (Min. 6 chars)</label>
+          <input type="password" id="regPassword" class="form-input" placeholder="••••••••" required autocomplete="new-password">
+          <span class="form-error" id="regPasswordError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="regConfirmPassword" class="form-label">Confirm Password</label>
+          <input type="password" id="regConfirmPassword" class="form-input" placeholder="••••••••" required autocomplete="new-password">
+          <span class="form-error" id="regConfirmPasswordError"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block" id="registerSubmitBtn">
+          Create Free Account
+        </button>
+
+        <div class="modal-switch">
+          Already have an account?
+          <button type="button" class="btn-link" id="switchToLoginBtn">Login</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ================= INTERVIEW SETUP MODAL ================= -->
+  <div class="modal-overlay" id="setupModal" role="dialog" aria-modal="true" aria-labelledby="setupTitle" hidden>
+    <div class="modal-card">
+      <div class="modal-header">
+        <div class="modal-header-text">
+          <h3 class="modal-title" id="setupTitle">Configure Mock Interview</h3>
+          <p class="modal-subtitle">Calibrate session parameters before initiating camera stream</p>
+        </div>
+        <button type="button" class="modal-close" data-close-modal="setupModal" aria-label="Close modal">&times;</button>
+      </div>
+
+      <form id="setupForm" class="modal-form">
+        <div class="form-group">
+          <label for="setupRole" class="form-label">Target Role</label>
+          <select id="setupRole" class="form-select">
+            <option value="Full Stack Developer">Full Stack Developer</option>
+            <option value="Frontend Developer">Frontend Developer</option>
+            <option value="Backend Developer">Backend Developer</option>
+            <option value="Technical">Technical Core</option>
+            <option value="Behavioral">Behavioral Round</option>
+            <option value="HR">HR &amp; Culture Fit</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="setupType" class="form-label">Interview Type</label>
+            <select id="setupType" class="form-select">
+              <option value="Technical">Technical Inquiry</option>
+              <option value="Behavioral">Behavioral / STAR</option>
+              <option value="Mixed">Mixed Comprehensive</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="setupDifficulty" class="form-label">Difficulty</label>
+            <select id="setupDifficulty" class="form-select">
+              <option value="Medium">Medium (Mid-level)</option>
+              <option value="Junior">Junior (Foundational)</option>
+              <option value="Senior">Senior (Advanced)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="setupQuestionCount" class="form-label">Number of Questions</label>
+          <select id="setupQuestionCount" class="form-select">
+            <option value="3">3 Questions (Rapid Test • ~6 mins)</option>
+            <option value="5" selected>5 Questions (Standard Practice • ~12 mins)</option>
+            <option value="10">10 Questions (Full Assessment • ~25 mins)</option>
+          </select>
+        </div>
+
+        <div class="setup-notice">
+          <div class="notice-icon">📷</div>
+          <div class="notice-text">
+            <strong>Webcam Permission:</strong> When you start, your browser will prompt for camera access. The camera feed stays locally in your browser for live posture and eye alignment metrics.
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block btn-lg" id="startSessionSubmitBtn">
+          Launch Interview Session
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ================= ACTIVE INTERVIEW SCREEN (FULLSCREEN VIEW) ================= -->
+  <div class="interview-overlay" id="interviewScreen" hidden>
+    <div class="interview-viewport">
+      
+      <!-- Top Navigation & Status Bar -->
+      <header class="interview-topbar">
+        <div class="interview-top-left">
+          <span class="brand-text">Interview<span class="brand-accent">AI</span></span>
+          <span class="topbar-divider">|</span>
+          <span class="topbar-role" id="activeRoleBadge">Full Stack Developer</span>
+          <span class="badge-status live" id="activeStatusBadge">SESSION LIVE</span>
+        </div>
+
+        <div class="interview-top-center">
+          <div class="interview-progress-wrapper">
+            <div class="progress-info">
+              <span id="interviewQIndicator">Question 1 of 5</span>
+              <span id="interviewProgressPercent">20%</span>
+            </div>
+            <div class="progress-track">
+              <div class="progress-fill" id="interviewProgressBar" style="width: 20%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="interview-top-right">
+          <div class="interview-timer-box">
+            <span class="timer-icon">⏱️</span>
+            <span class="timer-digits" id="interviewTimer">00:00</span>
+          </div>
+          <button type="button" class="btn btn-danger btn-sm" id="endInterviewBtn">
+            End Session
+          </button>
+        </div>
+      </header>
+
+      <!-- Main Split Workstation -->
+      <div class="interview-workspace">
+        
+        <!-- Left: Question & Answer Console -->
+        <section class="interview-left-pane">
+          <div class="pane-card question-pane">
+            <div class="pane-meta">
+              <span class="q-tag" id="activeTopicBadge">TOPIC: CORE ARCHITECTURE</span>
+              <span class="difficulty-tag" id="activeDiffBadge">DIFFICULTY: MEDIUM</span>
+            </div>
+
+            <h2 class="active-question-heading" id="activeQuestionText">
+              Loading question from generative engine...
+            </h2>
+
+            <div class="question-hints-box" id="questionHintsBox">
+              <span class="hints-label">Focus Areas:</span>
+              <span class="hint-pill" id="hintPill1">Definition</span>
+              <span class="hint-pill" id="hintPill2">Mechanism</span>
+              <span class="hint-pill" id="hintPill3">Practical Trade-offs</span>
+            </div>
+          </div>
+
+          <div class="pane-card answer-pane">
+            <div class="answer-header">
+              <label for="candidateAnswerInput" class="answer-label">Candidate Answer</label>
+              <div class="answer-stats">
+                <span id="wordCountLabel">0 words</span>
+                <span class="stats-sep">•</span>
+                <span id="charCountLabel">0 chars</span>
+                <span class="stats-sep">•</span>
+                <span class="save-status" id="saveStatusIndicator">Auto-saved</span>
+              </div>
+            </div>
+
+            <textarea 
+              id="candidateAnswerInput" 
+              class="answer-textarea" 
+              placeholder="Structure your answer clearly. Mention technical concepts, real-world examples, and underlying architectural trade-offs..."
+              rows="9"
+            ></textarea>
+
+            <div class="answer-action-bar">
+              <div class="answer-tools">
+                <button type="button" class="btn btn-ghost btn-sm" id="clearAnswerBtn" title="Clear current answer">
+                  Clear
+                </button>
+                <button type="button" class="btn btn-ghost btn-sm" id="sampleAnswerBtn" title="Insert a solid sample response for demonstration">
+                  Insert Sample Answer
+                </button>
+              </div>
+
+              <div class="answer-controls">
+                <button type="button" class="btn btn-secondary" id="prevQuestionBtn" disabled>
+                  ← Previous
+                </button>
+                <button type="button" class="btn btn-secondary" id="nextQuestionBtn">
+                  Next Question →
+                </button>
+                <button type="button" class="btn btn-primary" id="submitAnswerBtn">
+                  Submit &amp; Next
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Right: Camera & Vision HUD Pane -->
+        <section class="interview-right-pane">
+          <div class="pane-card camera-pane">
+            <div class="camera-header">
+              <div class="camera-title-wrap">
+                <span class="camera-dot" id="cameraStatusDot"></span>
+                <span class="camera-title">MEDIAPIPE VISION TELEMETRY</span>
+              </div>
+              <div class="camera-actions">
+                <button type="button" class="btn-icon" id="toggleCameraBtn" title="Toggle camera device">
+                  📷
+                </button>
+              </div>
+            </div>
+
+            <div class="camera-viewport" id="cameraViewport">
+              <!-- Actual Video Feed -->
+              <video id="camera" autoplay playsinline muted></video>
+
+              <!-- MediaPipe Visual Mesh HUD Overlay -->
+              <div class="hud-overlay" id="hudOverlay">
+                <!-- Target Bounding Box -->
+                <div class="hud-bounding-box" id="hudBoundingBox">
+                  <div class="hud-corner top-left"></div>
+                  <div class="hud-corner top-right"></div>
+                  <div class="hud-corner bottom-left"></div>
+                  <div class="hud-corner bottom-right"></div>
+                  <div class="hud-center-crosshair"></div>
+                </div>
+
+                <!-- Eye Tracking Markers -->
+                <div class="hud-eye left-eye" id="hudLeftEye"></div>
+                <div class="hud-eye right-eye" id="hudRightEye"></div>
+
+                <!-- Telemetry Tags -->
+                <div class="hud-data-tag top">
+                  FACE DETECTED: <span id="hudFaceStatus">TRACKING ACTIVE</span>
+                </div>
+                <div class="hud-data-tag bottom">
+                  ORIENTATION: <span id="hudOrientationStatus">CENTERED (0.02)</span>
+                </div>
+              </div>
+
+              <!-- Camera Unavailable Fallback State -->
+              <div class="camera-fallback" id="cameraFallback">
+                <div class="fallback-icon">📷</div>
+                <div class="fallback-title">Camera Feed Inactive</div>
+                <div class="fallback-desc" id="cameraFallbackMessage">
+                  Click 'Request Camera' below or allow webcam permissions to activate real-time MediaPipe face &amp; gaze tracking.
+                </div>
+                <button type="button" class="btn btn-secondary btn-sm" id="retryCameraBtn">
+                  Request Camera Access
+                </button>
+              </div>
+            </div>
+
+            <!-- Vision Metrics Panel -->
+            <div class="vision-metrics">
+              <div class="vision-row">
+                <div class="vision-col">
+                  <div class="metric-lbl">EYE CONTACT</div>
+                  <div class="metric-val" id="metricEyeVal">92%</div>
+                  <div class="metric-bar"><div class="metric-fill" id="metricEyeBar" style="width: 92%;"></div></div>
+                </div>
+                <div class="vision-col">
+                  <div class="metric-lbl">FACE PRESENCE</div>
+                  <div class="metric-val" id="metricFaceVal">98%</div>
+                  <div class="metric-bar"><div class="metric-fill" id="metricFaceBar" style="width: 98%;"></div></div>
+                </div>
+              </div>
+
+              <div class="vision-note">
+                <span>🔒 Privacy:</span> Video stream is analyzed locally within browser memory. No video is uploaded.
+              </div>
+            </div>
+          </div>
+
+          <!-- Session Progress Overview -->
+          <div class="pane-card questions-overview-pane">
+            <h4 class="overview-title">Question Navigator</h4>
+            <div class="q-pill-grid" id="questionNavGrid">
+              <!-- Dynamically populated question pills -->
+            </div>
+            <div class="overview-action">
+              <button type="button" class="btn btn-ghost btn-block btn-sm" id="finishAllBtn">
+                Finish Interview Early &amp; Calculate Score
+              </button>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= RESULT REPORT SCREEN (MODAL / FULL VIEW) ================= -->
+  <div class="modal-overlay result-modal-overlay" id="resultModal" role="dialog" aria-modal="true" aria-labelledby="resultTitle" hidden>
+    <div class="result-card">
+      <div class="result-header">
+        <div class="result-header-left">
+          <div class="result-badge">PERFORMANCE EVALUATION REPORT</div>
+          <h2 class="result-title" id="resultTitle">Interview Completed</h2>
+          <p class="result-subtitle" id="resultSubtitle">Detailed diagnostic scoring evaluated by Gemini AI &amp; MediaPipe signals</p>
+        </div>
+        <button type="button" class="modal-close" data-close-modal="resultModal" aria-label="Close modal">&times;</button>
+      </div>
+
+      <div class="result-body">
+        
+        <!-- Score Highlights Banner -->
+        <div class="result-score-banner">
+          <div class="score-circle">
+            <div class="score-number" id="resultOverallScore">8.4</div>
+            <div class="score-scale">/ 10</div>
+            <div class="score-caption">Overall Score</div>
+          </div>
+
+          <div class="score-breakdown-grid">
+            <div class="score-metric-item">
+              <div class="metric-head">
+                <span class="metric-label">Technical Knowledge</span>
+                <span class="metric-score" id="resultTechScore">8.6 / 10</span>
+              </div>
+              <div class="result-meter"><div class="meter-bar" id="resultTechBar" style="width: 86%;"></div></div>
+            </div>
+
+            <div class="score-metric-item">
+              <div class="metric-head">
+                <span class="metric-label">Communication &amp; Clarity</span>
+                <span class="metric-score" id="resultCommScore">8.0 / 10</span>
+              </div>
+              <div class="result-meter"><div class="meter-bar" id="resultCommBar" style="width: 80%;"></div></div>
+            </div>
+
+            <div class="score-metric-item">
+              <div class="metric-head">
+                <span class="metric-label">Answer Relevance</span>
+                <span class="metric-score" id="resultRelevanceScore">8.5 / 10</span>
+              </div>
+              <div class="result-meter"><div class="meter-bar" id="resultRelevanceBar" style="width: 85%;"></div></div>
+            </div>
+
+            <div class="score-metric-item">
+              <div class="metric-head">
+                <span class="metric-label">Eye Contact Alignment</span>
+                <span class="metric-score" id="resultEyeScore">90%</span>
+              </div>
+              <div class="result-meter"><div class="meter-bar" id="resultEyeBar" style="width: 90%;"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Strengths and Weaknesses -->
+        <div class="result-insights-grid">
+          <div class="insight-box strengths">
+            <div class="insight-header">
+              <span class="insight-icon">✓</span>
+              <h3 class="insight-title">Demonstrated Strengths</h3>
+            </div>
+            <ul class="insight-list" id="resultStrengthsList">
+              <li>Comprehensive explanation of foundational concepts</li>
+              <li>Clear articulation of architectural trade-offs</li>
+              <li>Steady eye contact and composed physical delivery</li>
+            </ul>
+          </div>
+
+          <div class="insight-box improvements">
+            <div class="insight-header">
+              <span class="insight-icon">•</span>
+              <h3 class="insight-title">Areas to Improve</h3>
+            </div>
+            <ul class="insight-list" id="resultImprovementsList">
+              <li>Provide more production edge-case code samples</li>
+              <li>Structure answers using concise problem-solution framing</li>
+              <li>Refine database indexing explanation under high concurrency</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Question-by-Question Diagnostic Breakdown -->
+        <div class="result-questions-section">
+          <h3 class="section-subhead">Question-by-Question Evaluation</h3>
+          <div class="questions-accordion" id="resultQuestionsAccordion">
+            <!-- Dynamically populated question breakdown items -->
+          </div>
+        </div>
+
+      </div>
+
+      <div class="result-footer">
+        <div class="result-footer-left">
+          <span class="result-timestamp" id="resultTimestamp">Evaluated: Just now</span>
+        </div>
+        <div class="result-footer-right">
+          <button type="button" class="btn btn-secondary" id="resultDashboardBtn">
+            View Candidate Dashboard
+          </button>
+          <button type="button" class="btn btn-primary" id="resultTryAgainBtn">
+            Practice Another Interview
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
